@@ -1,0 +1,180 @@
+{
+  "users": [
+    {
+      "email": "guest@ecotrack.org",
+      "password": "guestpassword123",
+      "name": "Eco Enthusiast",
+      "points": 180,
+      "streak": 3,
+      "lastActiveDate": "2026-06-20",
+      "onboardingComplete": true,
+      "profile": {
+        "location": "North America",
+        "transportation": "car-petrol",
+        "diet": "average",
+        "electricity": 350,
+        "shopping": "medium",
+        "waste": "average"
+      },
+      "badges": [
+        "eco-novice",
+        "transit-champ"
+      ],
+      "monthlyTarget": 500
+    },
+    {
+      "email": "dsunnam18@gmail.com",
+      "password": "DURGAa4688$",
+      "name": "DURGA",
+      "points": 110,
+      "streak": 0,
+      "lastActiveDate": "2026-06-21",
+      "onboardingComplete": true,
+      "profile": {
+        "location": "Asia",
+        "transportation": "bike-walk",
+        "diet": "average",
+        "electricity": 600,
+        "shopping": "medium",
+        "waste": "average"
+      },
+      "badges": [
+        "eco-novice",
+        "eco-starter"
+      ],
+      "monthlyTarget": 600
+    }
+  ],
+  "footprints": [
+    {
+      "email": "guest@ecotrack.org",
+      "date": "2026-06-19",
+      "transport": 12.5,
+      "energy": 6.8,
+      "food": 5,
+      "shopping": 1.2,
+      "waste": 0.5,
+      "total": 26
+    },
+    {
+      "email": "guest@ecotrack.org",
+      "date": "2026-06-18",
+      "transport": 15,
+      "energy": 6.8,
+      "food": 7.2,
+      "shopping": 15,
+      "waste": 0.5,
+      "total": 44.5
+    },
+    {
+      "email": "guest@ecotrack.org",
+      "date": "2026-06-17",
+      "transport": 0,
+      "energy": 6.8,
+      "food": 3.8,
+      "shopping": 0,
+      "waste": 0.2,
+      "total": 10.8
+    },
+    {
+      "email": "dsunnam18@gmail.com",
+      "date": "2026-06-21",
+      "transport": 0,
+      "energy": 9.04,
+      "food": 5,
+      "shopping": 3.57,
+      "waste": 1.07,
+      "total": 18.68
+    }
+  ],
+  "habitsLog": [
+    {
+      "email": "guest@ecotrack.org",
+      "actionId": "led-lights",
+      "date": "2026-06-20",
+      "pointsEarned": 50
+    },
+    {
+      "email": "guest@ecotrack.org",
+      "actionId": "public-transit",
+      "date": "2026-06-19",
+      "pointsEarned": 30
+    },
+    {
+      "email": "guest@ecotrack.org",
+      "actionId": "vegetarian-meal",
+      "date": "2026-06-18",
+      "pointsEarned": 20
+    },
+    {
+      "email": "dsunnam18@gmail.com",
+      "actionId": "smart-offset",
+      "date": "2026-06-21",
+      "pointsEarned": 60
+    }
+  ],
+  "challenges": [
+    {
+      "id": "car-free-weekend",
+      "title": "Car-Free Weekend",
+      "description": "Log zero car travel on Saturday and Sunday. Use public transport, bike, or walk!",
+      "points": 150,
+      "participants": 342,
+      "daysLeft": 4
+    },
+    {
+      "id": "meatless-week",
+      "title": "Meatless Mon-Fri",
+      "description": "Go vegetarian or vegan for five consecutive weekdays.",
+      "points": 200,
+      "participants": 189,
+      "daysLeft": 6
+    },
+    {
+      "id": "zero-waste-day",
+      "title": "Zero Waste Hero",
+      "description": "A full day without buying anything in single-use plastic, and compost all organic waste.",
+      "points": 100,
+      "participants": 512,
+      "daysLeft": 2
+    }
+  ],
+  "leaderboard": [
+    {
+      "name": "Sarah Green",
+      "points": 1250,
+      "streak": 12,
+      "level": "Eco-Warrior"
+    },
+    {
+      "name": "David Miller",
+      "points": 980,
+      "streak": 5,
+      "level": "Habit Builder"
+    },
+    {
+      "name": "Elena Rostova",
+      "points": 850,
+      "streak": 8,
+      "level": "Carbon Reducer"
+    },
+    {
+      "name": "Eco Enthusiast",
+      "points": 180,
+      "streak": 3,
+      "level": "Eco-Novice"
+    },
+    {
+      "name": "Liam Chen",
+      "points": 140,
+      "streak": 1,
+      "level": "Eco-Novice"
+    },
+    {
+      "name": "DURGA",
+      "points": 110,
+      "streak": 0,
+      "level": "Eco-Novice"
+    }
+  ]
+}

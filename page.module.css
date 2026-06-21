@@ -1,0 +1,248 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: radial-gradient(circle at 10% 20%, var(--background) 0%, rgba(16, 185, 129, 0.04) 90%);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: transparent;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.logoIcon {
+  color: var(--primary);
+  animation: bounceSlow 3s infinite;
+}
+
+.main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 60px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.badge {
+  margin-bottom: 20px;
+}
+
+.headline {
+  font-size: 3.2rem;
+  line-height: 1.15;
+  font-weight: 800;
+  color: var(--foreground);
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.highlight {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--gray-medium);
+  margin-bottom: 40px;
+  max-width: 580px;
+}
+
+.featuresGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  backdrop-filter: var(--glass-blur);
+}
+
+.featureIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconGreen { color: #10b981; }
+.iconYellow { color: #f59e0b; }
+.iconBlue { color: #3b82f6; }
+
+.featureItem h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 2px;
+}
+
+.featureItem p {
+  font-size: 0.85rem;
+  color: var(--gray-medium);
+}
+
+.formSection {
+  display: flex;
+  justify-content: center;
+  animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.authCard {
+  width: 100%;
+  max-width: 420px;
+  padding: 35px;
+  border-radius: 20px;
+}
+
+.authCard h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 8px;
+}
+
+.authSubtext {
+  font-size: 0.9rem;
+  color: var(--gray-medium);
+  margin-bottom: 25px;
+}
+
+.authForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.inputGroup label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.inputGroup input {
+  font-size: 0.95rem;
+  padding: 10px 12px;
+}
+
+.errorText {
+  color: var(--danger);
+  background: rgba(239, 68, 68, 0.08);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--gray-medium);
+  font-size: 0.85rem;
+  margin: 15px 0;
+}
+
+.divider::before, .divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.divider span {
+  padding: 0 10px;
+}
+
+.switchAuth {
+  font-size: 0.85rem;
+  color: var(--gray-medium);
+  text-align: center;
+}
+
+.switchLink {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.switchLink:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  text-align: center;
+  padding: 24px;
+  font-size: 0.85rem;
+  color: var(--gray-medium);
+  border-top: 1px solid var(--card-border);
+  background: var(--card-bg);
+  backdrop-filter: var(--glass-blur);
+}
+
+@media (max-width: 950px) {
+  .main {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 20px;
+  }
+  .headline {
+    font-size: 2.5rem;
+  }
+  .heroSection {
+    align-items: center;
+    text-align: center;
+  }
+  .tagline {
+    margin-bottom: 30px;
+  }
+  .featuresGrid {
+    max-width: 100%;
+  }
+  .authCard {
+    max-width: 100%;
+  }
+}

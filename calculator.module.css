@@ -1,0 +1,380 @@
+.main {
+  flex: 1;
+  padding: 40px 20px;
+  background: radial-gradient(circle at 10% 20%, var(--background) 0%, rgba(16, 185, 129, 0.03) 90%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.calcHeader {
+  margin-bottom: 30px;
+}
+
+.calcHeader h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--foreground);
+  margin-bottom: 6px;
+}
+
+.calcHeader p {
+  color: var(--gray-medium);
+  font-size: 1rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.formCard {
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.dateSelector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  font-size: 0.9rem;
+}
+
+.calendarIcon {
+  color: var(--primary);
+}
+
+.dateSelector label {
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.dateInput {
+  font-size: 0.85rem;
+  padding: 6px 12px;
+}
+
+.tabsContainer {
+  display: flex;
+  gap: 6px;
+  border-bottom: 1px solid var(--card-border);
+  padding-bottom: 12px;
+  margin-bottom: 25px;
+  overflow-x: auto;
+}
+
+.tabBtn {
+  background: transparent;
+  border: none;
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+  white-space: nowrap;
+  opacity: 0.7;
+}
+
+.tabBtn:hover {
+  background: var(--gray-light);
+  opacity: 1;
+}
+
+.tabBtn.activeTab {
+  background: var(--primary-light);
+  color: var(--primary);
+  opacity: 1;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.tabContent {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.tabContent h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 4px;
+}
+
+.desc {
+  font-size: 0.85rem;
+  color: var(--gray-medium);
+  margin-bottom: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.field label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.field input, .field select {
+  font-size: 0.95rem;
+  padding: 10px 12px;
+}
+
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.radioCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.radioCard:hover {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+.radioCard.activeRadio {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+.radioCard input[type="radio"] {
+  accent-color: var(--primary);
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.radioText {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.radioText strong {
+  font-size: 0.95rem;
+  color: var(--foreground);
+}
+
+.radioText span {
+  font-size: 0.8rem;
+  color: var(--gray-medium);
+}
+
+.checkboxGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--foreground);
+  cursor: pointer;
+}
+
+.checkboxLabel input {
+  accent-color: var(--primary);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.error {
+  color: var(--danger);
+  background: rgba(239, 68, 68, 0.08);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.resultColumn {
+  position: sticky;
+  top: 95px;
+}
+
+.resultCard {
+  padding: 35px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.successIconBadge {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  color: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 15px auto;
+  border: 1px solid var(--card-border);
+}
+
+.resultCard h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--foreground);
+  margin-bottom: 6px;
+}
+
+.pointsNotice {
+  font-size: 0.9rem;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.awardIcon {
+  animation: bounceSlow 3s infinite;
+}
+
+.totalEmissions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.bigCO2 {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--foreground);
+  line-height: 1;
+}
+
+.co2Unit {
+  font-size: 1rem;
+  color: var(--gray-medium);
+  font-weight: 600;
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background: var(--card-border);
+  margin: 20px 0;
+}
+
+.resultCard h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--foreground);
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.breakdownList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.breakdownRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.rowLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gray-medium);
+}
+
+.colorIndicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.comparisonsText {
+  font-size: 0.85rem;
+  color: var(--gray-medium);
+  line-height: 1.5;
+  background: var(--gray-light);
+  padding: 12px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.placeholderCard {
+  padding: 60px 40px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholderIcon {
+  color: var(--card-border);
+  margin-bottom: 20px;
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+.placeholderCard h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 8px;
+}
+
+.placeholderCard p {
+  font-size: 0.9rem;
+  color: var(--gray-medium);
+  line-height: 1.5;
+  max-width: 280px;
+}
+
+@media (max-width: 850px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .resultColumn {
+    position: static;
+  }
+}

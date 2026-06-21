@@ -1,0 +1,176 @@
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  gap: 15px;
+  background: var(--background);
+}
+
+.spinner {
+  color: var(--primary);
+  animation: bounceSlow 3s infinite ease-in-out;
+}
+
+.main {
+  flex: 1;
+  padding: 40px 20px;
+  background: radial-gradient(circle at 10% 20%, var(--background) 0%, rgba(16, 185, 129, 0.02) 90%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.headerArea {
+  margin-bottom: 30px;
+}
+
+.headerArea h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--foreground);
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+
+.headerArea p {
+  color: var(--gray-medium);
+  font-size: 1.05rem;
+}
+
+.actionGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 900px) {
+  .actionGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .actionGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.actionCard {
+  padding: 24px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.cardHeader h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.cardDesc {
+  font-size: 0.85rem;
+  color: var(--gray-medium);
+  line-height: 1.5;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  background: var(--gray-light);
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.statMetric {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.statIconGreen { color: var(--primary); }
+.statIconYellow { color: var(--accent); }
+.statIconBlue { color: #3b82f6; }
+
+.metricVal {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.metricLabel {
+  display: block;
+  font-size: 0.65rem;
+  color: var(--gray-medium);
+  font-weight: 600;
+}
+
+.pointsBlock {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--foreground);
+  margin-bottom: 18px;
+}
+
+.pointsIcon {
+  color: var(--primary);
+  animation: bounceSlow 3s infinite;
+}
+
+.pointsBlock strong {
+  color: var(--primary);
+}
+
+.logBtn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+.logBtn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.loggedBtn {
+  background: rgba(16, 185, 129, 0.05);
+  color: var(--primary);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: not-allowed;
+  width: 100%;
+}

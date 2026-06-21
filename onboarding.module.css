@@ -1,0 +1,272 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: radial-gradient(circle at 10% 20%, var(--background) 0%, rgba(16, 185, 129, 0.04) 90%);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid var(--card-border);
+  background: var(--card-bg);
+  backdrop-filter: var(--glass-blur);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.logoIcon {
+  color: var(--primary);
+  animation: bounceSlow 3s infinite;
+}
+
+.welcome {
+  font-size: 0.95rem;
+  color: var(--gray-medium);
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 580px;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.progressContainer {
+  margin-bottom: 30px;
+}
+
+.progressBar {
+  height: 6px;
+  background: var(--gray-light);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--primary);
+  border-radius: 3px;
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stepIndicator {
+  font-size: 0.85rem;
+  color: var(--gray-medium);
+  font-weight: 500;
+  text-align: right;
+}
+
+.stepContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.iconCircle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  border: 1px solid var(--card-border);
+}
+
+.icon {
+  color: var(--primary);
+}
+
+.stepContainer h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 8px;
+}
+
+.stepContainer p {
+  font-size: 0.95rem;
+  color: var(--gray-medium);
+  margin-bottom: 24px;
+  max-width: 400px;
+}
+
+.selectGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.selectButton {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  color: var(--foreground);
+  border-radius: 12px;
+  padding: 16px 20px;
+  font-size: 1rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.selectButton:hover {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+.selectButton.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+}
+
+.gridSelect {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.gridButton {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  color: var(--foreground);
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 0.95rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.gridButton:hover {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+.gridButton.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  text-align: left;
+  margin-top: 15px;
+}
+
+.inputContainer label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.inputContainer input {
+  font-size: 1.1rem;
+  padding: 12px;
+}
+
+.checkboxGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: var(--foreground);
+  cursor: pointer;
+}
+
+.checkboxLabel input {
+  margin-top: 4px;
+  cursor: pointer;
+  accent-color: var(--primary);
+  width: 16px;
+  height: 16px;
+}
+
+.divider {
+  width: 100%;
+  border: 0;
+  height: 1px;
+  background: var(--card-border);
+  margin: 25px 0;
+}
+
+.unit {
+  font-size: 0.85rem;
+  color: var(--gray-medium);
+  margin-top: 4px;
+}
+
+.navigation {
+  display: flex;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid var(--card-border);
+}
+
+.error {
+  color: var(--danger);
+  background: rgba(239, 68, 68, 0.1);
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 15px 20px;
+  }
+  .card {
+    padding: 24px;
+  }
+  .gridSelect {
+    grid-template-columns: 1fr;
+  }
+}

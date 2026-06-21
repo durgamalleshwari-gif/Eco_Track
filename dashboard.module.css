@@ -1,0 +1,421 @@
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  gap: 15px;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.spinner {
+  color: var(--primary);
+  animation: bounceSlow 3s infinite ease-in-out;
+}
+
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  gap: 15px;
+  text-align: center;
+  padding: 20px;
+}
+
+.errorIcon {
+  color: var(--danger);
+}
+
+.main {
+  flex: 1;
+  padding: 40px 20px;
+  background: radial-gradient(circle at 10% 20%, var(--background) 0%, rgba(16, 185, 129, 0.02) 90%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.welcomeRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.welcomeRow h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--foreground);
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+
+.welcomeRow p {
+  color: var(--gray-medium);
+  font-size: 1rem;
+}
+
+.streakPanel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 9999px;
+  border: 1px solid rgba(249, 115, 22, 0.2);
+  background: rgba(249, 115, 22, 0.05);
+  color: #f97316;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.streakFlame {
+  animation: bounceSlow 2s infinite;
+}
+
+.statCard {
+  padding: 20px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.statIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--card-border);
+}
+
+[data-theme="dark"] .statIcon {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.statInfo h4 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gray-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.statValue {
+  display: flex;
+  align-items: baseline;
+}
+
+.valNum {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--foreground);
+}
+
+.valUnit {
+  font-size: 0.8rem;
+  color: var(--gray-medium);
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+.dashboardGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.leftColumn, .rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.dashboardCard {
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.dashboardCard h2 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--foreground);
+  margin-bottom: 4px;
+}
+
+.cardSubtitle {
+  font-size: 0.85rem;
+  color: var(--gray-medium);
+  margin-bottom: 25px;
+}
+
+.chartSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 30px;
+}
+
+.svgChartContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.legends {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.legendRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.legendIndicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legendName {
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+.legendValue {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legendValue strong {
+  color: var(--foreground);
+}
+
+.legendValue span {
+  color: var(--gray-medium);
+}
+
+.comparisonBarList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.comparisonBarRow {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 4px 0;
+}
+
+.barLabelInfo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+}
+
+.barBold {
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.barNormal {
+  font-weight: 500;
+  color: var(--gray-medium);
+}
+
+.barContainer {
+  height: 8px;
+  background: var(--gray-light);
+  border-radius: 4px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.habitsList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.habitItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  border-radius: 12px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  transition: all 0.2s;
+}
+
+.habitItem:hover {
+  border-color: var(--primary);
+}
+
+.habitDetails {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.habitDetails strong {
+  font-size: 0.95rem;
+  color: var(--foreground);
+  font-weight: 700;
+}
+
+.habitImpact {
+  font-size: 0.8rem;
+  color: var(--gray-medium);
+}
+
+.habitBtn {
+  background: var(--primary-light);
+  border: 1px solid var(--card-border);
+  color: var(--primary);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.habitBtn:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.completedHabit {
+  background: rgba(16, 185, 129, 0.02);
+  border-color: rgba(16, 185, 129, 0.3);
+  opacity: 0.8;
+}
+
+.completedBtn {
+  background: transparent;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: var(--primary);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: not-allowed;
+}
+
+.coachBanner {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(52, 211, 153, 0.02) 100%) !important;
+  border-color: rgba(16, 185, 129, 0.25) !important;
+}
+
+.coachBannerHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  color: var(--primary);
+}
+
+.coachBannerHeader h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.coachBanner p {
+  font-size: 0.88rem;
+  color: var(--gray-medium);
+  line-height: 1.5;
+}
+
+.badgeShowcase {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.badgeItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--gray-light);
+  border: 1px solid var(--card-border);
+}
+
+.badgeEmoji {
+  font-size: 1.4rem;
+}
+
+.badgeText {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.badgeText strong {
+  font-size: 0.88rem;
+  color: var(--foreground);
+}
+
+.badgeText span {
+  font-size: 0.75rem;
+  color: var(--gray-medium);
+}
+
+.emptyBadges {
+  font-size: 0.85rem;
+  color: var(--gray-medium);
+  text-align: center;
+  padding: 10px;
+}
+
+@media (max-width: 900px) {
+  .welcomeRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .dashboardGrid {
+    grid-template-columns: 1fr;
+  }
+  .chartSection {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

@@ -1,0 +1,319 @@
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  gap: 15px;
+  background: var(--background);
+}
+
+.spinner {
+  color: var(--primary);
+  animation: bounceSlow 3s infinite ease-in-out;
+}
+
+.main {
+  flex: 1;
+  padding: 40px 20px;
+  background: radial-gradient(circle at 10% 20%, var(--background) 0%, rgba(16, 185, 129, 0.02) 90%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.headerArea {
+  margin-bottom: 30px;
+}
+
+.headerArea h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--foreground);
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+
+.headerArea p {
+  color: var(--gray-medium);
+  font-size: 1.05rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.leftColumn, .rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.card {
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.weeklyHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.trendingIcon {
+  color: var(--primary);
+}
+
+.card h2 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--foreground);
+}
+
+.cardSubtitle {
+  font-size: 0.85rem;
+  color: var(--gray-medium);
+  margin-bottom: 25px;
+}
+
+.weeklyGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  .weeklyGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.weeklyStatBox {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border-radius: 12px;
+  background: var(--gray-light);
+  border: 1px solid var(--card-border);
+}
+
+.statLabel {
+  font-size: 0.8rem;
+  color: var(--gray-medium);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.statVal {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--foreground);
+}
+
+.reducedNotice {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px;
+  border-radius: 10px;
+  background: rgba(16, 185, 129, 0.04);
+  border: 1px solid var(--card-border);
+  font-size: 0.88rem;
+  color: var(--foreground);
+  line-height: 1.4;
+  text-align: left;
+}
+
+.reducedIcon {
+  color: var(--primary);
+  animation: bounceSlow 3s infinite;
+}
+
+.reducedNotice strong {
+  color: var(--primary);
+}
+
+.chartWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.predictionSvg {
+  max-width: 100%;
+}
+
+.actionButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.offsetList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.offsetItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-radius: 12px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  gap: 15px;
+}
+
+.offsetDetails {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.offsetDetails strong {
+  font-size: 0.95rem;
+  color: var(--foreground);
+  font-weight: 700;
+}
+
+.offsetMeta {
+  font-size: 0.78rem;
+  color: var(--gray-medium);
+}
+
+.offsetBtn {
+  background: var(--primary-light);
+  border: 1px solid var(--card-border);
+  color: var(--primary);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.offsetBtn:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* Modal dialog classes */
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modalCard {
+  width: 100%;
+  max-width: 500px;
+  padding: 35px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.modalCard h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--foreground);
+  margin-bottom: 6px;
+}
+
+.modalCard p {
+  font-size: 0.88rem;
+  color: var(--gray-medium);
+  margin-bottom: 25px;
+}
+
+.certificate {
+  border: 2px solid var(--primary);
+  background: var(--primary-light);
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.certLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.certIcon {
+  animation: bounceSlow 3s infinite;
+}
+
+.certBody {
+  font-size: 0.95rem;
+  color: var(--foreground);
+  line-height: 1.5;
+  margin-bottom: 20px !important;
+}
+
+.certFooter {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  border-top: 1px dashed var(--card-border);
+  padding-top: 12px;
+}
+
+.modalActions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Printing styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .leftColumn, .leftColumn * {
+    visibility: visible;
+  }
+  .leftColumn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}

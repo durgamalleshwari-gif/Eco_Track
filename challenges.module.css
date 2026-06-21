@@ -1,0 +1,339 @@
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  gap: 15px;
+  background: var(--background);
+}
+
+.spinner {
+  color: var(--primary);
+  animation: bounceSlow 3s infinite ease-in-out;
+}
+
+.main {
+  flex: 1;
+  padding: 40px 20px;
+  background: radial-gradient(circle at 10% 20%, var(--background) 0%, rgba(16, 185, 129, 0.02) 90%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.welcomeArea {
+  margin-bottom: 30px;
+}
+
+.welcomeArea h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--foreground);
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+
+.welcomeArea p {
+  color: var(--gray-medium);
+  font-size: 1.05rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.leftColumn, .rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.card {
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.card h2 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--foreground);
+  margin-bottom: 4px;
+}
+
+.cardSubtitle {
+  font-size: 0.85rem;
+  color: var(--gray-medium);
+  margin-bottom: 25px;
+}
+
+.challengesList {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.challengeItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 12px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  gap: 20px;
+}
+
+.challengeContent {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.challengeContent h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 6px;
+}
+
+.challengeContent p {
+  font-size: 0.85rem;
+  color: var(--gray-medium);
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.metaRow {
+  display: flex;
+  gap: 15px;
+}
+
+.metaStat {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.challengeReward {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-light);
+  color: var(--primary);
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--card-border);
+  min-width: 90px;
+}
+
+.awardIcon {
+  margin-bottom: 4px;
+  animation: bounceSlow 3s infinite;
+}
+
+.challengeReward strong {
+  font-size: 0.9rem;
+}
+
+.qrHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.qrHeaderIcon {
+  color: var(--primary);
+}
+
+.scannerWrapper {
+  width: 100%;
+  max-width: 450px;
+  height: 250px;
+  margin: 0 auto;
+  border: 2px dashed var(--card-border);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--gray-light);
+}
+
+.scannerPlaceholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+}
+
+.placeholderIcon {
+  color: var(--card-border);
+  margin-bottom: 15px;
+}
+
+.scannerPlaceholder p {
+  font-size: 0.85rem;
+  color: var(--gray-medium);
+  margin-bottom: 15px;
+}
+
+.scannerFeed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: #000000;
+  color: #10b981;
+  position: relative;
+}
+
+.laserLine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #10b981;
+  box-shadow: 0 0 12px #10b981;
+  animation: scanLaser 2s infinite ease-in-out;
+}
+
+@keyframes scanLaser {
+  0% { top: 10%; }
+  50% { top: 90%; }
+  100% { top: 10%; }
+}
+
+.cameraIconAnim {
+  margin-bottom: 15px;
+  animation: pulseGlow 1.5s infinite;
+}
+
+.scannerFeed span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.scannerSuccess {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+  background: var(--primary-light);
+  animation: fadeIn 0.4s ease-out;
+}
+
+.successBadge {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+  border: 2px solid white;
+}
+
+.scannerSuccess h3 {
+  font-size: 1.15rem;
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.scannerSuccess p {
+  font-size: 0.85rem;
+  color: var(--foreground);
+}
+
+.leaderboardList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.leaderboardRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  border-radius: 12px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+}
+
+.highlightRow {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+.playerInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rankNum {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--primary);
+  width: 25px;
+}
+
+.playerName {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--foreground);
+}
+
+.playerLevel {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--gray-medium);
+}
+
+.highlightRow .playerLevel {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.playerPoints {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 0.9rem;
+}
+
+.playerPoints strong {
+  color: var(--foreground);
+}
+
+.playerStreak {
+  font-size: 0.72rem;
+  color: #f97316;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
